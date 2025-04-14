@@ -90,7 +90,7 @@ function App() {
                 <h2 className="hero-title">Layanan Teknisi</h2>
                 <p className="hero-description">
                   Laporkan masalah teknis dengan mudah. Tim teknisi kami siap membantu
-                  menyelesaikan masalah komputer, jaringan, atau proyektor.
+                  menyelesaikan masalah komputer dan jaringan.
                 </p>
                 <div className="info-box">
                   <p className="info-text">
@@ -134,16 +134,16 @@ function App() {
                   <h3 className="option-title">Jaringan</h3>
                 </div>
                 <div 
-                  className={`option-card ${jenisKerusakan === 'Proyektor' ? 'selected' : ''}`}
+                  className={`option-card ${jenisKerusakan === 'Lainnya' ? 'selected' : ''}`}
                   onClick={() => {
-                    setJenisKerusakan('Proyektor');
+                    setJenisKerusakan('Lainnya');
                     setStep(2);
                   }}
                 >
                   <div className="option-icon">
                     <Video size={28} />
                   </div>
-                  <h3 className="option-title">Proyektor</h3>
+                  <h3 className="option-title">Lainnya</h3>
                 </div>
               </div>
             </div>
@@ -160,7 +160,7 @@ function App() {
                 <div className="summary-icon">
                   {jenisKerusakan === 'Komputer' && <Computer size={20} />}
                   {jenisKerusakan === 'Jaringan' && <Wifi size={20} />}
-                  {jenisKerusakan === 'Proyektor' && <Video size={20} />}
+                  {jenisKerusakan === 'Lainnya' && <Video size={20} />}
                 </div>
                 <p className="summary-text">
                   Anda memilih kerusakan: <span className="bold">{jenisKerusakan}</span>
@@ -209,7 +209,7 @@ function App() {
                       <div className="summary-icon">
                         {jenisKerusakan === 'Komputer' && <Computer size={20} />}
                         {jenisKerusakan === 'Jaringan' && <Wifi size={20} />}
-                        {jenisKerusakan === 'Proyektor' && <Video size={20} />}
+                        {jenisKerusakan === 'Lainnya' && <Video size={20} />}
                       </div>
                       <div>
                         <p className="item-label">Jenis Kerusakan</p>
